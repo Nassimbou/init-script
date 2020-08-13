@@ -14,6 +14,7 @@ sudo apt install -y git
 
 sudo apt install -y chromium
 sudo apt install tmux
+sudo apt install keepass2
 
 pip install wfuzz
 
@@ -25,3 +26,10 @@ cd ~/Outils/
 git clone https://github.com/danielmiessler/SecLists.git
 git clone https://github.com/Beijaflore-Security-LAB/sslcompare.git
 git clone https://github.com/Beijaflore-Security-LAB/headerexposer.git
+
+# Virtualbox
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian buster contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+sudo apt update
+sudo apt install -y dkms
+sudo apt install -y virtualbox virtualbox-ext-pack
