@@ -33,3 +33,9 @@ echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian buster c
 sudo apt update
 sudo apt install -y dkms
 sudo apt install -y virtualbox virtualbox-ext-pack
+
+# Tmux conf
+touch ~/.tmux.conf
+echo "set -g prefix C-w" > ~/.tmux.conf
+echo "bind C-w send prefix" >> ~/.tmux.conf
+echo "unbind C-b" >> ~/.tmux.conf
